@@ -115,16 +115,24 @@
 }
 
 @layer components {
-    .img-banner {
-        @apply w-3/4 h-full object-cover absolute right-0 top-0
-    }
-    
-    .bg-gradiente-branco {
-        @apply z-0 absolute left-0 top-0 w-full h-full bg-gradient-to-r from-branco from-40% to-branco/0 to-100%
-    }
-
     .titulo {
         @apply text-verde-escuro font-bold mb-8 uppercase
+    }
+
+    #banner .img-banner {
+        @apply w-3/4 h-full object-cover absolute right-0 top-0
+    }
+
+    #banner h1 {
+        @apply uppercase flex text-verde-escuro
+    }
+
+    #banner h1 span {
+        @apply mr-4 text-4xl text-[#536EB3]
+    }
+    
+    #banner .bg-gradiente-branco {
+        @apply z-0 absolute left-0 top-0 w-full h-full bg-gradient-to-r from-branco from-40% to-branco/0 to-100%
     }
 
     #experiencias .exp-container {
@@ -172,7 +180,7 @@
     }
 
     #avaliacoes .grade-logos img {
-        @apply aspect-square w-full h-20 object-contain scale-75
+        @apply aspect-square w-full h-20 object-contain
     }
 
     #estrutura, #galeria, #alimentacao, #valores {
@@ -200,7 +208,7 @@
     }
 
     #estrutura .mapa-regiao .mapa {
-        @apply bg-verde-escuro h-full
+        @apply bg-verde-escuro h-[30rem] object-cover
     }
 
     #estrutura .mapa-regiao .legenda {
@@ -328,8 +336,8 @@
         @apply m-0 text-branco
     }
 
-    #contato .bg-gradiente-branco {
-        @apply absolute left-0 w-full bg-gradient-to-r from-preto/100 from-50% to-preto/0 to-100%
+    #contato .bg-gradiente-preto {
+        @apply z-0 absolute left-0 top-0 w-full h-full bg-gradient-to-r from-preto/100 from-50% to-preto/0 to-100%
     }
 }
 
