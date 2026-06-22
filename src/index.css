@@ -33,7 +33,7 @@
     section {
         @apply w-full flex flex-col justify-between relative
         lg:min-h-[500px]
-        py-48 lg:py-28
+        py-32 lg:py-28
         /* overflow-hidden */
     }
 
@@ -56,7 +56,8 @@
     }
 
     h1 {
-        @apply font-bold leading-tight mb-4 text-[3.5rem] lg:text-3xl xl:text-4xl
+        @apply font-bold leading-tight mb-4
+        text-[1.5rem] lg:text-3xl xl:text-4xl
     }
 
     h2 {
@@ -64,11 +65,11 @@
     }
 
     h3 {
-        @apply text-[2.5rem] lg:text-lg font-bold
+        @apply text-[1rem] lg:text-lg font-bold
     }
 
     h4 {
-        @apply text-[2rem] lg:text-sm
+        @apply text-[.8rem] lg:text-sm
     }
 
     h5 {
@@ -76,15 +77,15 @@
     }
 
     p, li {
-        @apply text-preto text-[2rem] lg:text-sm z-10
+        @apply text-preto text-[.8rem] lg:text-sm z-10
     }
 
     strong {
-        @apply font-extrabold z-10 text-[2rem] lg:text-sm
+        @apply font-extrabold z-10 text-[.8rem] lg:text-sm
     }
 
     p, ul {
-        @apply mt-12 lg:mt-4 mb-0
+        @apply mt-8 lg:mt-4 mb-0
     }
 
     li {
@@ -119,8 +120,20 @@
         @apply text-verde-escuro font-bold mb-8 uppercase
     }
 
+    #banner {
+        @apply pt-8 pb-96 lg:py-28
+    }
+
+    #banner .logotipo {
+        @apply mx-auto
+        w-28 h-28 lg:w-40 lg:h-40 
+    }
+
     #banner .img-banner {
-        @apply w-3/4 h-full object-cover absolute right-0 top-0
+        @apply object-cover absolute
+        bottom-0 lg:right-0 lg:top-0
+        w-full lg:w-3/4
+        h-2/3 lg:h-full
     }
 
     #banner h1 {
@@ -128,15 +141,22 @@
     }
 
     #banner h1 span {
-        @apply mr-4 text-4xl text-[#536EB3]
+        @apply mr-4 text-[#536EB3]
+        lg:text-4xl
+    }
+
+    #banner h4 br {
+        @apply hidden lg:block
     }
     
     #banner .bg-gradiente-branco {
-        @apply z-0 absolute left-0 top-0 w-full h-full bg-gradient-to-r from-branco from-40% to-branco/0 to-100%
+        @apply z-0 absolute left-0 top-0 w-full h-full from-branco from-40% to-branco/0 to-100%
+        bg-gradient-to-b lg:bg-gradient-to-r 
     }
 
     #experiencias .exp-container {
-        @apply grid grid-cols-5 gap-4 mt-8
+        @apply grid gap-4 mt-8
+        lg:grid-cols-5
     }
 
     #experiencias .exp-box {
@@ -152,15 +172,22 @@
     }
 
     #experiencias .img-suites {
-        @apply w-full h-96 object-cover
+        @apply w-full object-cover
+        h-32 lg:h-96
+        last:mt-4 lg:!mt-0
     }
 
     #avaliacoes .avaliacao-box {
-        @apply flex-row items-center h-40 p-12 mt-4 first:mt-0 
+        @apply items-center mt-4 first:mt-0
+        lg:h-40
+        py-12 px-4 lg:p-12
+        flex-col lg:flex-row
+        bg-gradient-to-b lg:bg-gradient-to-r
     }
 
     #avaliacoes .avaliacao-box .logo-cliente {
-        @apply w-1/4 justify-center items-center
+        @apply justify-center items-center
+        w-full lg:w-1/4
     }
 
     #avaliacoes .avaliacao-box .logo-cliente img {
@@ -168,7 +195,9 @@
     }
 
     #avaliacoes .avaliacao-box .avaliacao-cliente {
-        @apply w-3/4 flex-col pl-8 text-branco
+        @apply flex-col text-branco
+        w-full lg:w-3/4
+        pt-8 lg:pl-8 lg:pt-0
     }
 
     #avaliacoes .avaliacao-box .avaliacao-cliente p {
@@ -176,11 +205,14 @@
     }
 
     #avaliacoes .grade-logos {
-        @apply grid grid-cols-5 gap-x-12 gap-y-1 mt-8
+        @apply grid
+        grid-cols-3 lg:grid-cols-5
+        gap-x-3 lg:gap-x-12 lg:gap-y-1
+        mt-8
     }
 
     #avaliacoes .grade-logos img {
-        @apply aspect-square w-full h-20 object-contain
+        @apply aspect-square w-full object-contain h-20
     }
 
     #estrutura, #galeria, #alimentacao, #valores {
@@ -188,7 +220,8 @@
     }
 
     #estrutura .estrutura-container {
-        @apply grid grid-cols-2 gap-2 mt-8
+        @apply grid gap-2 mt-8
+        lg:grid-cols-2
     }
 
     #estrutura .estrutura-box {
@@ -204,15 +237,18 @@
     }
 
     #estrutura .mapa-regiao {
-        @apply bg-verde-claro/20 h-full flex-col justify-between
+        @apply bg-verde-claro/20 flex-col justify-between h-full
+        mt-8 lg:mt-0
     }
 
     #estrutura .mapa-regiao .mapa {
-        @apply bg-verde-escuro h-[30rem] object-cover
+        @apply bg-verde-escuro object-cover
+        h-[10rem] lg:h-[30rem]
     }
 
     #estrutura .mapa-regiao .legenda {
-        @apply p-6 text-verde-escuro grid grid-cols-2 gap-4
+        @apply p-6 text-verde-escuro grid gap-4
+        lg:grid-cols-2
     }
     
     #estrutura .mapa-regiao .legenda li {
@@ -231,16 +267,24 @@
         @apply m-0 text-xs
     }
 
+    #galeria {
+        @apply py-0 lg:!py-28
+    }
+
     #galeria>div {
-        @apply !grid-cols-4 !gap-4
+        @apply lg:!grid-cols-4 !gap-4
     }
 
     #alimentacao .alim-box {
-        @apply flex flex-row h-64 justify-end overflow-hidden mb-4 relative
+        @apply flex justify-end overflow-hidden mb-4 relative
+        flex-col lg:flex-row
+        h-96 lg:h-64
     }
 
     #alimentacao .alim-box span {
-        @apply flex-col w-1/2 p-8 z-10 text-branco
+        @apply flex-col z-10 text-branco
+        w-full lg:w-1/2
+        p-4 lg:p-8
     }
 
     #alimentacao .alim-box span h3 {
@@ -252,11 +296,22 @@
     }
 
     #alimentacao .alim-box img {
-        @apply absolute top-0 left-0 h-full object-cover z-0 w-2/3
+        @apply absolute top-0 left-0 h-full object-cover z-0
+        w-full lg:w-2/3
     }
 
     #alimentacao .alim-box .gradiente-preto {
-        @apply bg-gradient-to-r from-preto/0 from-30% to-preto/100 to-60% absolute top-0 left-0 h-full w-full z-0
+        @apply  from-preto/0 from-30% to-preto/100 to-60% absolute top-0 left-0 h-full w-full z-0
+        bg-gradient-to-b lg:bg-gradient-to-r
+    }
+
+    #valores br {
+        @apply hidden lg:block
+    }
+
+    #valores .tab-container {
+        @apply overflow-x-scroll
+        w-[250px] lg:w-full 
     }
 
     #valores table {
@@ -268,7 +323,9 @@
     }
 
     #valores table thead th {
-        @apply p-4 text-branco
+        @apply text-branco
+        p-2 lg:p-4
+        text-xs lg:text-base
     }
 
     #valores table tbody tr {
@@ -276,12 +333,13 @@
     }
     
     #valores table tbody tr td {
-        @apply p-4 border-0 border-verde-escuro
-        first:font-bold 
+        @apply border-0 border-verde-escuro first:font-bold
+        p-2 lg:p-4 
+        text-xs lg:text-base
     }
     
     #valores table tbody tr .valores {
-        @apply !px-16 w-1/5
+        @apply px-8 lg:!px-16 w-1/5
     }
 
     #valores table tbody tr td span {
@@ -289,23 +347,27 @@
     }
 
     #valores table tbody tr td span p {
-        @apply m-0 text-base
+        @apply m-0
+        text-xs lg:text-base
     }
 
     #valores .checks {
-        @apply flex-row
+        @apply flex-row last:mt-4 lg:!mt-0
     }
 
     #valores .checks .icone {
-        @apply text-3xl w-[20rem] h-[3rem] mr-2
+        @apply mr-2 lg:scale-[50%]
+        w-1/6
     }
 
     #valores .checks p {
-        @apply m-0
+        @apply m-0 w-5/6
     }
 
     #contato {
-        @apply bg-espaco-externo-noite bg-right-top bg-no-repeat bg-contain
+        @apply bg-espaco-externo-noite bg-no-repeat bg-contain
+        bg-bottom lg:bg-right-top
+        pt-32 pb-64 lg:py-28
     }
 
     #contato p {
@@ -313,11 +375,27 @@
     }
 
     #contato .intro {
-        @apply grid grid-cols-2 mt-12 p-8 !pt-12 rounded-xl border-2 border-verde-claro gap-8 relative text-branco
+        @apply grid mt-12 rounded-xl border-2 border-verde-claro gap-8 relative text-branco
+        lg:grid-cols-2
+        px-8 !py-12 lg:p-8
     }
 
     #contato .intro h3 {
-        @apply font-bold text-verde-claro text-center bg-preto absolute h-16 w-4/6 left-[16%] -top-6 px-4
+        @apply font-bold text-verde-claro text-center bg-preto absolute -top-6 px-4
+        w-[90%] lg:w-4/6 lg:left-[16%] left-[5%]
+        h-28 lg:h-16
+    }
+
+    #contato .intro .prim {
+        @apply mt-12
+    }
+
+    #contato .intro span p {
+        @apply mt-0
+    }
+
+    #contato .intro h3 br {
+        @apply hidden lg:block
     }
 
     #contato .intro .icone {
@@ -337,7 +415,9 @@
     }
 
     #contato .bg-gradiente-preto {
-        @apply z-0 absolute left-0 top-0 w-full h-full bg-gradient-to-r from-preto/100 from-50% to-preto/0 to-100%
+        @apply z-0 absolute left-0 top-0 w-full h-full from-preto/100 to-preto/0
+        from-[85%] lg:from-50% to-100%
+        bg-gradient-to-b lg:bg-gradient-to-r
     }
 }
 
