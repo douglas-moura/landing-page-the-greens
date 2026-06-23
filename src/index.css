@@ -332,8 +332,8 @@
     }
 
     #valores .tab-container {
-        @apply overflow-x-scroll
-        w-[250px] md:w-full 
+        @apply overflow-x-scroll lg:overflow-x-auto
+        w-[260px] md:w-full
     }
 
     #valores table {
@@ -355,13 +355,13 @@
     }
     
     #valores table tbody tr td {
-        @apply border-0 border-verde-escuro first:font-bold
+        @apply border-0 border-verde-escuro first:font-bold first:min-w-[200px]
         p-2 lg:p-4 
         text-xs lg:text-base
     }
     
     #valores table tbody tr .valores {
-        @apply px-8 lg:!px-16 w-1/5
+        @apply px-8 lg:!px-16 min-w-[150px] lg:w-1/5
     }
 
     #valores table tbody tr td span {
