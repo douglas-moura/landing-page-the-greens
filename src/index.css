@@ -133,7 +133,7 @@
         @apply !bg-verde-claro text-branco
     }
 
-    #estrutura, #galeria, #alimentacao, #valores {
+    #estrutura, #galeria, #alimentacao, #valores, #exp {
         @apply bg-verde-reticula
     }
 
@@ -142,11 +142,11 @@
     }
 
     #banner {
-        @apply pt-8 pb-96 lg:py-28
+        @apply pt-8 pb-96 lg:py-20
     }
 
     #banner .logotipo {
-        @apply mx-auto
+        @apply mx-auto lg:-mt-8 lg:ml-0 mb-8
         w-28 h-28 lg:w-40 lg:h-40 
     }
 
@@ -176,27 +176,31 @@
         bg-gradient-to-b lg:bg-gradient-to-r 
     }
 
-    #experiencias .exp-container {
+    #exp .exp-container {
         @apply grid gap-4 mt-8
         md:grid-cols-3 lg:grid-cols-5
     }
 
-    #experiencias .exp-box {
+    #exp .exp-box {
         @apply h-72 lg:h-96 flex-col justify-end overflow-hidden
     }
 
-    #experiencias .exp-box img {
+    #exp .exp-box img {
         @apply h-full object-cover 
     }
 
-    #experiencias .exp-box span {
+    #exp .exp-box span {
         @apply bg-verde-claro text-branco font-medium w-full items-center p-4
     }
 
     #experiencias .img-suites {
         @apply w-full object-cover
-        h-32 md:h-72 lg:h-96
+        h-56 md:h-72 lg:h-full
         last:mt-4 md:!mt-0
+    }
+
+    #avaliacoes h1 br {
+        @apply hidden lg:block
     }
 
     #avaliacoes .avaliacao-box {
@@ -347,7 +351,7 @@
     }
 
     #valores table tbody tr {
-        @apply odd:bg-verde-claro/10
+        @apply even:bg-verde-claro/10
     }
     
     #valores table tbody tr td {
@@ -385,7 +389,7 @@
     #contato {
         @apply bg-espaco-externo-noite bg-no-repeat
         bg-contain lg:bg-cover
-        bg-bottom lg:bg-right-top
+        bg-bottom lg:bg-right
         pt-32 pb-64 lg:py-28
     }
 
