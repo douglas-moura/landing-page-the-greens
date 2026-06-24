@@ -361,15 +361,19 @@
     }
     
     #valores table tbody tr .valores {
-        @apply px-8 lg:!px-16 min-w-[150px] lg:w-1/5
+        @apply px-10 lg:!px-16 min-w-[150px] lg:w-1/5 last:text-center
+    }
+
+    #valores table tbody tr .v-menor {
+        @apply px-14 lg:!px-20 min-w-[150px] lg:w-1/5
     }
 
     #valores table tbody tr td span {
-        @apply flex-row justify-between
+        @apply flex-row justify-center
     }
 
     #valores table tbody tr td span p {
-        @apply m-0
+        @apply m-0 w-1/2 text-center last:text-right
         text-xs lg:text-base
     }
 
