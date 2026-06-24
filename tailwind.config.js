@@ -7,8 +7,8 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                'espaco-externo': "url('/src/assets/img/espaco/espaco-externo-1.jpg')",
-                'espaco-externo-noite': "url('/src/assets/img/espaco/espaco-externo-noite.png')"
+                'espaco-externo': "url('/src/assets/img/espaco/espaco-externo-1.webp')",
+                'espaco-externo-noite': "url('/src/assets/img/espaco/espaco-externo-noite.webp')"
             },
         },
         fontFamily: {

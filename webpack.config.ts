@@ -1,9 +1,9 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const isProduction = process.env.NODE_ENV === 'production';
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const isProduction = process.env.NODE_ENV === 'production'
 
 /** @type {import("webpack").Configuration} */
 const config: import("webpack").Configuration = {
@@ -21,6 +21,7 @@ const config: import("webpack").Configuration = {
         new HtmlWebpackPlugin({
             template: './src/index.html',
         }),
+        new MiniCssExtractPlugin()
 
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/
@@ -44,7 +45,7 @@ const config: import("webpack").Configuration = {
             {
                 test: /\.css$/i,
                 use: [
-                    'style-loader',
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                     'postcss-loader',
                 ],
@@ -56,7 +57,7 @@ const config: import("webpack").Configuration = {
     },
     resolve: {
         extensions: [".tsx", ".ts", ".jsx", ".js", "..."],
-    },
+    }
 }
 
 module.exports = () => {
