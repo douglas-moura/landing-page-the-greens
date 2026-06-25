@@ -1,12 +1,13 @@
-// Generated using webpack-cli https://github.com/webpack/webpack-cli
+import 'webpack-dev-server'
+import path from 'path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import type { Configuration } from 'webpack'
 
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const isProduction = process.env.NODE_ENV === 'production'
 
 /** @type {import("webpack").Configuration} */
-const config: import("webpack").Configuration = {
+const config: Configuration = {
     entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -31,7 +32,7 @@ const config: import("webpack").Configuration = {
             {
                 test: /\.(ts|tsx)$/i,
                 loader: 'ts-loader',
-                exclude: ['/node_modules/'],
+                exclude: '/node_modules/',
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
