@@ -1,4 +1,4 @@
-![The Greens Landing Page](./src/img/preview.jpg)
+![The Greens Landing Page](./src/assets/img/preview.jpg)
 
 # The Greens Landing Page
 
@@ -49,8 +49,10 @@ https://lp.thegreens.com.br/
 ```text
 .
 ├── src/
-│   ├── img/            # Imagens e assets da landing page
-│   ├── pdf/            # Materiais institucionais
+│   ├── assets/
+│   │   ├── img/            # Imagens e assets da landing page
+│   │   ├── pdf/            # Materiais institucionais
+│   │   ├── video/          # Vídeo promocional do espaço
 │   ├── global.d.ts
 │   ├── index.css       # Estilos da aplicação
 │   ├── index.html      # Estrutura da página
