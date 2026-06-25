@@ -1,4 +1,4 @@
-![The Greens Landing Page](./src/img/preview.png)
+![The Greens Landing Page](./src/img/preview.jpg)
 
 # The Greens Landing Page
 
